@@ -1,0 +1,58 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import '../styles/HomePage.css';
+
+function HomePage() {
+  const navigate = useNavigate();
+
+  const handleSmartphoneClick = (e) => {
+    e.preventDefault();
+    navigate('/smartphones');
+  };
+
+  return (
+    <div className="home-page">
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Welcome to Nozirev</h1>
+          <p>Discover the latest gadgets and accessories</p>
+          <button className="cta-button">Shop Now</button>
+        </div>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="featured-products">
+        <h2>Featured Products</h2>
+        <div className="products-grid">
+          <div className="product-card">
+            <div className="product-image smartphone"></div>
+            <h3>Latest Smartphones</h3>
+            <p>Premium quality smartphones with cutting-edge technology</p>
+            <a href="#" onClick={handleSmartphoneClick} className="product-link">View More</a>
+          </div>
+          <div className="product-card">
+            <div className="product-image tablet"></div>
+            <h3>Tablets</h3>
+            <p>High-performance tablets for work and entertainment</p>
+            <a href="#tablets" className="product-link">View More</a>
+          </div>
+          <div className="product-card">
+            <div className="product-image watch"></div>
+            <h3>Smart Watches</h3>
+            <p>Stay connected with our smart watch collection</p>
+            <a href="#watches" className="product-link">View More</a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default HomePage;
