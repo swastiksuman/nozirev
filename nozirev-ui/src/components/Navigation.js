@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import '../styles/Navigation.css';
 
 function Navigation() {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
+  const totalCount = useSelector((state) => state.cart.totalCount);
 
   const handleNavClick = (path) => {
     navigate(path);
@@ -39,6 +41,10 @@ function Navigation() {
             <button className="nav-link">Contact</button>
           </li>
         </ul>
+        <button className="cart-btn" onClick={() => handleNavClick('/cart')}>
+          🛒
+          {totalCount > 0 && <span className="cart-count">{totalCount}</span>}
+        </button>
       </div>
     </nav>
   );
