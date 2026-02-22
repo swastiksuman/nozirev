@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #1b1b1b;
+}
+
 .App {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 /* Navigation Bar */

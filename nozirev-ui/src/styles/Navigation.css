@@ -1,27 +1,33 @@
 /* Navigation Bar Styles */
 .navbar {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 1rem 0;
+  background: #000000;
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #CD040B;
 }
 
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 64px;
 }
 
 .logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.logo:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
 }
 
 .nav-menu {
@@ -37,19 +43,21 @@
 }
 
 .nav-link {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.3s ease;
+  font-weight: 700;
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1em;
   padding: 0;
 }
 
 .nav-link:hover {
-  opacity: 0.8;
+  color: #CD040B;
 }
 
 .dropdown {
@@ -60,31 +68,35 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: #1b1b1b;
   list-style: none;
-  margin: 0.5rem 0 0 0;
-  padding: 0.5rem 0;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  min-width: 150px;
+  margin: 0;
+  padding: 0.4rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  min-width: 180px;
+  border-top: 2px solid #CD040B;
 }
 
 .dropdown-link {
   display: block;
   padding: 0.75rem 1.5rem;
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background 0.2s ease, color 0.2s ease;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
   width: 100%;
   text-align: left;
 }
 
 .dropdown-link:hover {
-  background: #f0f0f0;
+  background: #CD040B;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -100,14 +112,14 @@
 /* Cart Button */
 .cart-btn {
   position: relative;
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: #CD040B;
+  border: none;
   color: white;
-  font-size: 1.4em;
-  border-radius: 8px;
-  padding: 6px 14px;
+  font-size: 1.3em;
+  border-radius: 4px;
+  padding: 6px 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -115,17 +127,17 @@
 }
 
 .cart-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: #a80009;
 }
 
 .cart-count {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  background: #ff4757;
-  color: white;
-  font-size: 0.55em;
-  font-weight: bold;
+  top: -7px;
+  right: -7px;
+  background: #ffffff;
+  color: #CD040B;
+  font-size: 0.5em;
+  font-weight: 900;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -133,4 +145,5 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
+  border: 1.5px solid #CD040B;
 }

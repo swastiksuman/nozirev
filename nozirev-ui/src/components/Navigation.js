@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import NozirevLogo from '../assets/NozirevLogo';
 import '../styles/Navigation.css';
 
 function Navigation() {
@@ -15,7 +16,9 @@ function Navigation() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="logo" onClick={() => handleNavClick('/')} role="button" tabIndex={0}>Nozirev</div>
+        <div className="logo" onClick={() => handleNavClick('/')} role="button" tabIndex={0}>
+          <NozirevLogo height={36} />
+        </div>
         <ul className="nav-menu">
           <li className="nav-item">
             <button className="nav-link" onClick={() => handleNavClick('/')}>Home</button>

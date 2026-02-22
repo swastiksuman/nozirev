@@ -1,13 +1,16 @@
 /* Footer Styles */
 .footer {
-  background: #333;
-  color: white;
+  background: #000000;
+  color: #aaaaaa;
   text-align: center;
   padding: 2rem;
   margin-top: auto;
+  border-top: 3px solid #CD040B;
 }
 
 .footer p {
   margin: 0;
-  font-size: 0.95em;
+  font-size: 0.85em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
