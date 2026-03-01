@@ -12,7 +12,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/smartphones" element={<ProductListing />} />
+          <Route path="/smartphones" element={<ProductListing category="smartphones" />} />
+          <Route path="/tablets" element={<ProductListing category="tablets" />} />
+          <Route path="/watches" element={<ProductListing category="watches" />} />
         </Routes>
       </Router>
     </Provider>
