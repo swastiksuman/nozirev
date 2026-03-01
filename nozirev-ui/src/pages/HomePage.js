@@ -12,6 +12,17 @@ function HomePage() {
     navigate('/smartphones');
   };
 
+  const handleTabletClick = (e) => {
+    console.log('Tablet link clicked');
+    e.preventDefault();
+    navigate('/tablets');
+  };
+
+  const handleWatchClick = (e) => {
+    e.preventDefault();
+    navigate('/watches');
+  };
+
   return (
     <div className="home-page">
       <Navigation />
@@ -39,13 +50,13 @@ function HomePage() {
             <div className="product-image tablet"></div>
             <h3>Tablets</h3>
             <p>High-performance tablets for work and entertainment</p>
-            <a href="#tablets" className="product-link">View More</a>
+            <a href="#tablets" onClick={handleTabletClick} className="product-link">View More</a>
           </div>
           <div className="product-card">
             <div className="product-image watch"></div>
             <h3>Smart Watches</h3>
             <p>Stay connected with our smart watch collection</p>
-            <a href="#watches" className="product-link">View More</a>
+            <a href="#watches" onClick={handleWatchClick} className="product-link">View More</a>
           </div>
         </div>
       </section>

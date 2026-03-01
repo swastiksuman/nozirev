@@ -5,11 +5,11 @@ import {
   FETCH_PRODUCTS_ERROR,
 } from '../reducers/productReducer';
 
-export const fetchProducts = () => async (dispatch) => {
+export const fetchProducts = (category = 'smartphones') => async (dispatch) => {
   dispatch({ type: FETCH_PRODUCTS_REQUEST });
 
   try {
-    const data = await fetchProductList();
+    const data = await fetchProductList(category);
     dispatch({
       type: FETCH_PRODUCTS_SUCCESS,
       payload: data,

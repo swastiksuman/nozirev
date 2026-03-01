@@ -13,7 +13,15 @@ function ProductListing() {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8080/getProductList');
+      const response = await fetch('http://localhost:8080/api/getProductList', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'smartphones',
+        }),
+      });
       
       if (!response.ok) {
         throw new Error('Failed to fetch products');

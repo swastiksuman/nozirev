@@ -6,13 +6,13 @@ import { fetchProducts } from '../redux/actions/productActions';
 import { addToCart } from '../redux/actions/cartActions';
 import '../styles/ProductListing.css';
 
-function ProductListing() {
+function ProductListing({ category = 'smartphones' }) {
   const dispatch = useDispatch();
   const { products, loading, error } = useSelector((state) => state.products);
 
   useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
+    dispatch(fetchProducts(category));
+  }, [dispatch, category]);
 
   return (
     <div className="product-listing-container">
