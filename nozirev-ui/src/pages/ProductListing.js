@@ -21,7 +21,7 @@ function ProductListing({ category = 'smartphones' }) {
       {/* Product Listing Section */}
       <section className="product-listing">
         <div className="listing-header">
-          <h1>Smartphones</h1>
+          <h1>{{category}}</h1>
           <p>Browse our collection of latest smartphones</p>
         </div>
 
