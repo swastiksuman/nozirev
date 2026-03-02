@@ -33,7 +33,7 @@ function Navigation() {
               <ul className="dropdown-menu">
                 <li><button onClick={() => handleNavClick('/smartphones')} className="dropdown-link">Smartphone</button></li>
                 <li><button onClick={() => handleNavClick('/tablets')} className="dropdown-link">Tablets</button></li>
-                <li><button className="dropdown-link">Watches</button></li>
+                <li><button onClick={() => handleNavClick('/watches')} className="dropdown-link">Watches</button></li>
               </ul>
             )}
           </li>
