@@ -1,7 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import '../styles/HomePage.css';
 
 function HomePage() {
@@ -25,7 +23,6 @@ function HomePage() {
 
   return (
     <div className="home-page">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="hero">
@@ -61,7 +58,6 @@ function HomePage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { fetchProducts } from '../redux/actions/productActions';
 import { addToCart } from '../redux/actions/cartActions';
 import '../styles/ProductListing.css';
@@ -16,12 +14,11 @@ function ProductListing({ category = 'smartphones' }) {
 
   return (
     <div className="product-listing-container">
-      <Navigation />
 
       {/* Product Listing Section */}
       <section className="product-listing">
         <div className="listing-header">
-          <h1>{{category}}</h1>
+          <h1>{category}</h1>
           <p>Browse our collection of latest smartphones</p>
         </div>
 
@@ -54,7 +51,6 @@ function ProductListing({ category = 'smartphones' }) {
         )}
       </section>
 
-      <Footer />
     </div>
   );
 }
