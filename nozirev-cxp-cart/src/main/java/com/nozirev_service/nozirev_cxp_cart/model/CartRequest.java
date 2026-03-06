@@ -15,5 +15,11 @@ public class CartRequest {
     private String userId;
 
     @Valid
+    private ProfileDetails profileDetails;
+
+    @Valid
+    private ShippingDetails shippingDetails;
+
+    @Valid
     private CartItem item;
 }

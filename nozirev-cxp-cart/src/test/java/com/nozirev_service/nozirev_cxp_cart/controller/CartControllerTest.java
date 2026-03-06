@@ -75,6 +75,24 @@ class CartControllerTest {
                 .expectStatus().isBadRequest();
     }
 
+    @Test
+    @DisplayName("POST /api/cart/create persists profile and shipping details")
+    void createCart_withProfileAndShipping_shouldPersistDetails() {
+        webTestClient.post()
+                .uri("/api/cart/create")
+                .contentType(MediaType.APPLICATION_JSON)
+                .bodyValue(createCartBodyWithDetails("user-details"))
+                .exchange()
+                .expectStatus().isCreated()
+                .expectBody()
+                .jsonPath("$.success").isEqualTo(true)
+                .jsonPath("$.cart.userId").isEqualTo("user-details")
+                .jsonPath("$.cart.profileDetails.firstName").isEqualTo("John")
+                .jsonPath("$.cart.profileDetails.lastName").isEqualTo("Doe")
+                .jsonPath("$.cart.shippingDetails.addressLine1").isEqualTo("12 Main St")
+                .jsonPath("$.cart.shippingDetails.deliveryType").isEqualTo("Express");
+    }
+
     // ── POST /api/cart/addItem ────────────────────────────────────────────────
 
     @Test
@@ -118,6 +136,22 @@ class CartControllerTest {
                 .bodyValue("{\"item\":{\"productId\":1,\"productName\":\"iPhone 11\",\"imageUrl\":\"https://example.com\",\"amount\":599,\"quantity\":1}}")
                 .exchange()
                 .expectStatus().isBadRequest();
+    }
+
+    @Test
+    @DisplayName("POST /api/cart/addItem accepts details and returns them in response")
+    void addItem_withProfileAndShipping_shouldReturnDetails() {
+        webTestClient.post()
+                .uri("/api/cart/addItem")
+                .contentType(MediaType.APPLICATION_JSON)
+                .bodyValue(addItemBodyWithDetails("user8", 1, "iPhone 11", 599))
+                .exchange()
+                .expectStatus().isCreated()
+                .expectBody()
+                .jsonPath("$.success").isEqualTo(true)
+                .jsonPath("$.cart.totalCount").isEqualTo(1)
+                .jsonPath("$.cart.profileDetails.mobileNumber").isEqualTo("9999999999")
+                .jsonPath("$.cart.shippingDetails.pinCode").isEqualTo("560001");
     }
 
     // ── PUT /api/cart/updateItem ──────────────────────────────────────────────
@@ -277,5 +311,55 @@ class CartControllerTest {
                   }
                 }
                 """.formatted(userId, productId, name, amount, name);
+    }
+
+    private String addItemBodyWithDetails(String userId, int productId, String name, double amount) {
+        return """
+                {
+                  "userId": "%s",
+                  "profileDetails": {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "mobileNumber": "9999999999",
+                    "email": "john.doe@example.com"
+                  },
+                  "shippingDetails": {
+                    "addressLine1": "12 Main St",
+                    "addressLine2": "Suite 3",
+                    "state": "KA",
+                    "pinCode": "560001",
+                    "deliveryType": "Express"
+                  },
+                  "item": {
+                    "productId": %d,
+                    "productName": "%s",
+                    "imageUrl": "https://example.com/img.jpg",
+                    "amount": %s,
+                    "quantity": 1,
+                    "description": "%s"
+                  }
+                }
+                """.formatted(userId, productId, name, amount, name);
+    }
+
+    private String createCartBodyWithDetails(String userId) {
+        return """
+                {
+                  "userId": "%s",
+                  "profileDetails": {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "mobileNumber": "9999999999",
+                    "email": "john.doe@example.com"
+                  },
+                  "shippingDetails": {
+                    "addressLine1": "12 Main St",
+                    "addressLine2": "Suite 3",
+                    "state": "KA",
+                    "pinCode": "560001",
+                    "deliveryType": "Express"
+                  }
+                }
+                """.formatted(userId);
     }
 }
