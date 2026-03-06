@@ -2,6 +2,8 @@ package com.nozirev_service.nozirev_cxp_cart.service;
 
 import com.nozirev_service.nozirev_cxp_cart.model.Cart;
 import com.nozirev_service.nozirev_cxp_cart.model.CartItem;
+import com.nozirev_service.nozirev_cxp_cart.model.ProfileDetails;
+import com.nozirev_service.nozirev_cxp_cart.model.ShippingDetails;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -39,6 +41,25 @@ class CartServiceTest {
         Cart cart1 = cartService.createCart("user1");
         Cart cart2 = cartService.createCart("user1");
         assertEquals(cart1.getCartId(), cart2.getCartId());
+    }
+
+    @Test
+    @DisplayName("createCart should store provided profile and shipping details")
+    void createCart_withDetails_shouldStoreDetails() {
+        ProfileDetails profileDetails = new ProfileDetails();
+        profileDetails.setFirstName("John");
+        profileDetails.setLastName("Doe");
+
+        ShippingDetails shippingDetails = new ShippingDetails();
+        shippingDetails.setAddressLine1("12 Main St");
+        shippingDetails.setPinCode("560001");
+
+        Cart cart = cartService.createCart("user-details", profileDetails, shippingDetails);
+
+        assertNotNull(cart.getProfileDetails());
+        assertNotNull(cart.getShippingDetails());
+        assertEquals("John", cart.getProfileDetails().getFirstName());
+        assertEquals("12 Main St", cart.getShippingDetails().getAddressLine1());
     }
 
     // ── getCart ───────────────────────────────────────────────────────────────
@@ -97,6 +118,22 @@ class CartServiceTest {
         Cart cart = cartService.addItem("newuser", mockItem);
         assertNotNull(cart);
         assertEquals(1, cart.getItems().size());
+    }
+
+    @Test
+    @DisplayName("addItem should store provided profile and shipping details")
+    void addItem_withDetails_shouldStoreDetails() {
+        ProfileDetails profileDetails = new ProfileDetails();
+        profileDetails.setMobileNumber("9999999999");
+
+        ShippingDetails shippingDetails = new ShippingDetails();
+        shippingDetails.setDeliveryType("Express");
+
+        Cart cart = cartService.addItem("user-add-details", mockItem, profileDetails, shippingDetails);
+
+        assertEquals(1, cart.getItems().size());
+        assertEquals("9999999999", cart.getProfileDetails().getMobileNumber());
+        assertEquals("Express", cart.getShippingDetails().getDeliveryType());
     }
 
     // ── updateItem ────────────────────────────────────────────────────────────

@@ -2,6 +2,8 @@ package com.nozirev_service.nozirev_cxp_cart.service;
 
 import com.nozirev_service.nozirev_cxp_cart.model.Cart;
 import com.nozirev_service.nozirev_cxp_cart.model.CartItem;
+import com.nozirev_service.nozirev_cxp_cart.model.ProfileDetails;
+import com.nozirev_service.nozirev_cxp_cart.model.ShippingDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -16,8 +18,14 @@ public class CartService {
     private final Map<String, Cart> cartStore = new ConcurrentHashMap<>();
 
     public Cart createCart(String userId) {
-        return cartStore.computeIfAbsent(userId, id ->
+        return createCart(userId, null, null);
+    }
+
+    public Cart createCart(String userId, ProfileDetails profileDetails, ShippingDetails shippingDetails) {
+        Cart cart = cartStore.computeIfAbsent(userId, id ->
                 new Cart(UUID.randomUUID().toString(), id));
+        applyDetails(cart, profileDetails, shippingDetails);
+        return cart;
     }
 
     public Optional<Cart> getCart(String userId) {
@@ -25,7 +33,11 @@ public class CartService {
     }
 
     public Cart addItem(String userId, CartItem item) {
-        Cart cart = createCart(userId);
+        return addItem(userId, item, null, null);
+    }
+
+    public Cart addItem(String userId, CartItem item, ProfileDetails profileDetails, ShippingDetails shippingDetails) {
+        Cart cart = createCart(userId, profileDetails, shippingDetails);
 
         Optional<CartItem> existing = cart.getItems().stream()
                 .filter(i -> i.getProductId().equals(item.getProductId()))
@@ -74,5 +86,14 @@ public class CartService {
 
     public boolean deleteCart(String userId) {
         return cartStore.remove(userId) != null;
+    }
+
+    private void applyDetails(Cart cart, ProfileDetails profileDetails, ShippingDetails shippingDetails) {
+        if (profileDetails != null) {
+            cart.setProfileDetails(profileDetails);
+        }
+        if (shippingDetails != null) {
+            cart.setShippingDetails(shippingDetails);
+        }
     }
 }

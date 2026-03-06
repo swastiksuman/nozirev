@@ -31,7 +31,10 @@ public class CartController {
     // POST /api/cart/create
     @PostMapping("/create")
     public ResponseEntity<CartResponse> createCart(@RequestBody @Valid CartRequest request) {
-        var cart = cartService.createCart(request.getUserId());
+        var cart = cartService.createCart(
+                request.getUserId(),
+                request.getProfileDetails(),
+                request.getShippingDetails());
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(CartResponse.ok("Cart created successfully", cart));
     }
@@ -39,7 +42,11 @@ public class CartController {
     // POST /api/cart/addItem
     @PostMapping("/addItem")
     public ResponseEntity<CartResponse> addItem(@RequestBody @Valid CartRequest request) {
-        var cart = cartService.addItem(request.getUserId(), request.getItem());
+        var cart = cartService.addItem(
+                request.getUserId(),
+                request.getItem(),
+                request.getProfileDetails(),
+                request.getShippingDetails());
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(CartResponse.ok("Item added to cart", cart));
     }

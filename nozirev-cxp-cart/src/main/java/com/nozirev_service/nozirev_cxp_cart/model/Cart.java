@@ -13,6 +13,10 @@ public class Cart {
 
     private String cartId;
     private String userId;
+
+    private ProfileDetails profileDetails = new ProfileDetails();
+    private ShippingDetails shippingDetails = new ShippingDetails();
+
     private List<CartItem> items = new ArrayList<>();
     private double totalAmount;
     private int totalCount;

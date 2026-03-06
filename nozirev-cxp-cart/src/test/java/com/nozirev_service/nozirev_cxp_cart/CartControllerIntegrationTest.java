@@ -26,14 +26,38 @@ class CartControllerIntegrationTest {
         webTestClient.post().uri("/api/cart/addItem")
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue("""
-                        {"userId":"integUser","item":{"productId":1,"productName":"iPhone 11",
-                        "imageUrl":"https://example.com","amount":599,"quantity":1,"description":"Test"}}
+                        {
+                          "userId":"integUser",
+                          "profileDetails":{
+                            "firstName":"Jane",
+                            "lastName":"Doe",
+                            "mobileNumber":"9999999999",
+                            "email":"jane@example.com"
+                          },
+                          "shippingDetails":{
+                            "addressLine1":"22 Main St",
+                            "addressLine2":"Floor 2",
+                            "state":"KA",
+                            "pinCode":"560001",
+                            "deliveryType":"Express"
+                          },
+                          "item":{
+                            "productId":1,
+                            "productName":"iPhone 11",
+                            "imageUrl":"https://example.com",
+                            "amount":599,
+                            "quantity":1,
+                            "description":"Test"
+                          }
+                        }
                         """)
                 .exchange()
                 .expectStatus().isCreated()
                 .expectBody()
                 .jsonPath("$.cart.totalCount").isEqualTo(1)
-                .jsonPath("$.cart.totalAmount").isEqualTo(599.0);
+                .jsonPath("$.cart.totalAmount").isEqualTo(599.0)
+                .jsonPath("$.cart.profileDetails.firstName").isEqualTo("Jane")
+                .jsonPath("$.cart.shippingDetails.deliveryType").isEqualTo("Express");
 
         // Update quantity to 3
         webTestClient.put().uri("/api/cart/updateItem")
