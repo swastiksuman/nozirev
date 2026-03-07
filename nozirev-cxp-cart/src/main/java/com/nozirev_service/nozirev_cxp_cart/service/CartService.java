@@ -4,6 +4,9 @@ import com.nozirev_service.nozirev_cxp_cart.model.Cart;
 import com.nozirev_service.nozirev_cxp_cart.model.CartItem;
 import com.nozirev_service.nozirev_cxp_cart.model.ProfileDetails;
 import com.nozirev_service.nozirev_cxp_cart.model.ShippingDetails;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -21,6 +24,7 @@ public class CartService {
         return createCart(userId, null, null);
     }
 
+    @CachePut(value = "carts", key = "#userId")
     public Cart createCart(String userId, ProfileDetails profileDetails, ShippingDetails shippingDetails) {
         Cart cart = cartStore.computeIfAbsent(userId, id ->
                 new Cart(UUID.randomUUID().toString(), id));
@@ -28,6 +32,7 @@ public class CartService {
         return cart;
     }
 
+    @Cacheable(value = "carts", key = "#userId", unless = "#result == null")
     public Optional<Cart> getCart(String userId) {
         return Optional.ofNullable(cartStore.get(userId));
     }
@@ -36,6 +41,7 @@ public class CartService {
         return addItem(userId, item, null, null);
     }
 
+    @CachePut(value = "carts", key = "#userId")
     public Cart addItem(String userId, CartItem item, ProfileDetails profileDetails, ShippingDetails shippingDetails) {
         Cart cart = createCart(userId, profileDetails, shippingDetails);
 
@@ -53,6 +59,7 @@ public class CartService {
         return cart;
     }
 
+    @CachePut(value = "carts", key = "#userId", unless = "#result == null")
     public Optional<Cart> updateItem(String userId, Integer productId, int quantity) {
         return getCart(userId).map(cart -> {
             if (quantity == 0) {
@@ -68,6 +75,7 @@ public class CartService {
         });
     }
 
+    @CachePut(value = "carts", key = "#userId", unless = "#result == null")
     public Optional<Cart> removeItem(String userId, Integer productId) {
         return getCart(userId).map(cart -> {
             cart.getItems().removeIf(i -> i.getProductId().equals(productId));
@@ -76,6 +84,7 @@ public class CartService {
         });
     }
 
+    @CachePut(value = "carts", key = "#userId", unless = "#result == null")
     public Optional<Cart> clearCart(String userId) {
         return getCart(userId).map(cart -> {
             cart.getItems().clear();
@@ -84,6 +93,7 @@ public class CartService {
         });
     }
 
+    @CacheEvict(value = "carts", key = "#userId")
     public boolean deleteCart(String userId) {
         return cartStore.remove(userId) != null;
     }
