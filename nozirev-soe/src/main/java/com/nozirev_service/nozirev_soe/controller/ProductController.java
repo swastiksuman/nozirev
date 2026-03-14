@@ -13,9 +13,9 @@ public class ProductController {
 
     @PostMapping("/getProductList")
     public List<Product> getProductList(@RequestBody ProductRequest request) {
-        String type = request.getType().toLowerCase();
+        String productCategory = request.getType().toLowerCase();
 
-        switch (type) {
+        switch (productCategory) {
             case "smartphones":
                 return getSmartphones();
             case "tablets":
