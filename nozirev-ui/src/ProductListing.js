@@ -27,8 +27,8 @@ function ProductListing() {
         throw new Error('Failed to fetch products');
       }
       
-      const data = await response.json();
-      setProducts(data);
+      const productList = await response.json();
+      setProducts(productList);
       setError(null);
     } catch (err) {
       setError(err.message);

@@ -26,8 +26,8 @@ public class CartService {
 
     @CachePut(value = "carts", key = "#userId")
     public Cart createCart(String userId, ProfileDetails profileDetails, ShippingDetails shippingDetails) {
-        Cart cart = cartStore.computeIfAbsent(userId, id ->
-                new Cart(UUID.randomUUID().toString(), id));
+        Cart cart = cartStore.computeIfAbsent(userId, mappedUserId ->
+                new Cart(UUID.randomUUID().toString(), mappedUserId));
         applyDetails(cart, profileDetails, shippingDetails);
         return cart;
     }
@@ -46,7 +46,7 @@ public class CartService {
         Cart cart = createCart(userId, profileDetails, shippingDetails);
 
         Optional<CartItem> existing = cart.getItems().stream()
-                .filter(i -> i.getProductId().equals(item.getProductId()))
+                .filter(cartItem -> cartItem.getProductId().equals(item.getProductId()))
                 .findFirst();
 
         if (existing.isPresent()) {
@@ -63,12 +63,12 @@ public class CartService {
     public Optional<Cart> updateItem(String userId, Integer productId, int quantity) {
         return getCart(userId).map(cart -> {
             if (quantity == 0) {
-                cart.getItems().removeIf(i -> i.getProductId().equals(productId));
+                cart.getItems().removeIf(cartItem -> cartItem.getProductId().equals(productId));
             } else {
                 cart.getItems().stream()
-                        .filter(i -> i.getProductId().equals(productId))
+                        .filter(cartItem -> cartItem.getProductId().equals(productId))
                         .findFirst()
-                        .ifPresent(i -> i.setQuantity(quantity));
+                        .ifPresent(cartItem -> cartItem.setQuantity(quantity));
             }
             cart.recalculateTotals();
             return cart;
@@ -78,7 +78,7 @@ public class CartService {
     @CachePut(value = "carts", key = "#userId", unless = "#result == null")
     public Optional<Cart> removeItem(String userId, Integer productId) {
         return getCart(userId).map(cart -> {
-            cart.getItems().removeIf(i -> i.getProductId().equals(productId));
+            cart.getItems().removeIf(cartItem -> cartItem.getProductId().equals(productId));
             cart.recalculateTotals();
             return cart;
         });
