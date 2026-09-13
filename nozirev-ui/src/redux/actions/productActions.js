@@ -9,10 +9,10 @@ export const fetchProducts = (category = 'smartphones') => async (dispatch) => {
   dispatch({ type: FETCH_PRODUCTS_REQUEST });
 
   try {
-    const data = await fetchProductList(category);
+    const productList = await fetchProductList(category);
     dispatch({
       type: FETCH_PRODUCTS_SUCCESS,
-      payload: data,
+      payload: productList,
     });
   } catch (error) {
     dispatch({

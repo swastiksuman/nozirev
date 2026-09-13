@@ -5,19 +5,19 @@ import '../styles/HomePage.css';
 function HomePage() {
   const navigate = useNavigate();
 
-  const handleSmartphoneClick = (e) => {
-    e.preventDefault();
+  const handleSmartphoneClick = (event) => {
+    event.preventDefault();
     navigate('/smartphones');
   };
 
-  const handleTabletClick = (e) => {
+  const handleTabletClick = (event) => {
     console.log('Tablet link clicked');
-    e.preventDefault();
+    event.preventDefault();
     navigate('/tablets');
   };
 
-  const handleWatchClick = (e) => {
-    e.preventDefault();
+  const handleWatchClick = (event) => {
+    event.preventDefault();
     navigate('/watches');
   };
 
