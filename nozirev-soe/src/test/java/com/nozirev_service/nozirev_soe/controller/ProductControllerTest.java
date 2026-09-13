@@ -265,6 +265,30 @@ class ProductControllerTest {
                 .exchange()
                 .expectStatus().isEqualTo(405);
     }
+
+    @Test
+    @DisplayName("GET /api/getProduct/{id} with valid ID should return product")
+    void getProductById_withValidId_shouldReturnProduct() {
+        webTestClient.get()
+                .uri("/api/getProduct/1")
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .jsonPath("$.id").isEqualTo(1)
+                .jsonPath("$.productName").isEqualTo("iPhone 11")
+                .jsonPath("$.amount").isEqualTo(599)
+                .jsonPath("$.imageUrl").isNotEmpty()
+                .jsonPath("$.description").isEqualTo("iPhone 11 with dual camera");
+    }
+
+    @Test
+    @DisplayName("GET /api/getProduct/{id} with non-existent ID should return 404")
+    void getProductById_withInvalidId_shouldReturnNotFound() {
+        webTestClient.get()
+                .uri("/api/getProduct/999")
+                .exchange()
+                .expectStatus().isNotFound();
+    }
 }
 
 
