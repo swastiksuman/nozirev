@@ -1,0 +1,570 @@
+{
+  "smartphones": [
+    {
+      "id": 1,
+      "productName": "iPhone 11",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg",
+      "amount": 599,
+      "description": "iPhone 11 with dual camera",
+      "networkTechnology": "GSM / CDMA / HSPA / EVDO / LTE",
+      "launchDate": "September 2019",
+      "body": {
+        "dimensions": "150.9 x 75.7 x 8.3 mm (5.94 x 2.98 x 0.33 in)",
+        "weight": "194 g (6.84 oz)"
+      },
+      "display": {
+        "type": "Liquid Retina IPS LCD, 625 nits (typ)",
+        "size": "6.1 inches, 90.3 cm2 (~79.0% screen-to-body ratio)",
+        "resolution": "828 x 1792 pixels, 19.5:9 ratio (~326 ppi density)"
+      },
+      "mainCamera": "Dual 12 MP, f/1.8 (wide) + 12 MP, f/2.4 (ultrawide), 4K@60fps",
+      "selfieCamera": "12 MP, f/2.2 (wide) + SL 3D (depth/biometrics sensor), 4K@60fps"
+    },
+    {
+      "id": 2,
+      "productName": "iPhone 12",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
+      "amount": 699,
+      "description": "iPhone 12 with 5G support",
+      "networkTechnology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+      "launchDate": "October 2020",
+      "body": {
+        "dimensions": "146.7 x 71.5 x 7.4 mm (5.78 x 2.81 x 0.29 in)",
+        "weight": "164 g (5.78 oz)"
+      },
+      "display": {
+        "type": "Super Retina XDR OLED, HDR10, 625 nits (typ), 1200 nits (peak)",
+        "size": "6.1 inches, 90.2 cm2 (~86.0% screen-to-body ratio)",
+        "resolution": "1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)"
+      },
+      "mainCamera": "Dual 12 MP, f/1.6 (wide) + 12 MP, f/2.4 (ultrawide), 4K@60fps, Dolby Vision HDR",
+      "selfieCamera": "12 MP, f/2.2 (wide) + SL 3D (depth/biometrics sensor), 4K@60fps"
+    },
+    {
+      "id": 3,
+      "productName": "iPhone 13",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
+      "amount": 799,
+      "description": "iPhone 13 with improved battery",
+      "networkTechnology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+      "launchDate": "September 2021",
+      "body": {
+        "dimensions": "146.7 x 71.5 x 7.7 mm (5.78 x 2.81 x 0.30 in)",
+        "weight": "174 g (6.14 oz)"
+      },
+      "display": {
+        "type": "Super Retina XDR OLED, HDR10, 800 nits (typ), 1200 nits (peak)",
+        "size": "6.1 inches, 90.2 cm2 (~86.0% screen-to-body ratio)",
+        "resolution": "1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)"
+      },
+      "mainCamera": "Dual 12 MP, f/1.6 (wide, sensor-shift OIS) + 12 MP, f/2.4 (ultrawide), 4K@60fps",
+      "selfieCamera": "12 MP, f/2.2 (wide) + SL 3D (depth/biometrics sensor), 4K@60fps"
+    },
+    {
+      "id": 4,
+      "productName": "iPhone 14",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg",
+      "amount": 899,
+      "description": "iPhone 14 with crash detection",
+      "networkTechnology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+      "launchDate": "September 2022",
+      "body": {
+        "dimensions": "146.7 x 71.5 x 7.8 mm (5.78 x 2.81 x 0.31 in)",
+        "weight": "172 g (6.07 oz)"
+      },
+      "display": {
+        "type": "Super Retina XDR OLED, HDR10, 800 nits (typ), 1200 nits (peak)",
+        "size": "6.1 inches, 90.2 cm2 (~86.0% screen-to-body ratio)",
+        "resolution": "1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)"
+      },
+      "mainCamera": "Dual 12 MP, f/1.5 (wide, sensor-shift OIS) + 12 MP, f/2.4 (ultrawide), 4K@60fps, Action Mode",
+      "selfieCamera": "12 MP, f/1.9 (wide, PDAF) + SL 3D (depth/biometrics sensor), 4K@60fps"
+    },
+    {
+      "id": 5,
+      "productName": "iPhone 15",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg",
+      "amount": 999,
+      "description": "iPhone 15 with USB-C",
+      "networkTechnology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+      "launchDate": "September 2023",
+      "body": {
+        "dimensions": "147.6 x 71.6 x 7.8 mm (5.81 x 2.82 x 0.31 in)",
+        "weight": "171 g (6.03 oz)"
+      },
+      "display": {
+        "type": "Super Retina XDR OLED, HDR10, 1000 nits (typ), 2000 nits (peak)",
+        "size": "6.1 inches, 91.3 cm2 (~86.4% screen-to-body ratio)",
+        "resolution": "1179 x 2556 pixels, 19.5:9 ratio (~461 ppi density)"
+      },
+      "mainCamera": "Dual 48 MP, f/1.6 (wide, sensor-shift OIS) + 12 MP, f/2.4 (ultrawide), 4K@60fps",
+      "selfieCamera": "12 MP, f/1.9 (wide, PDAF) + SL 3D (depth/biometrics sensor), 4K@60fps"
+    },
+    {
+      "id": 6,
+      "productName": "iPhone 16",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg",
+      "amount": 1099,
+      "description": "iPhone 16 with advanced AI",
+      "networkTechnology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+      "launchDate": "September 2024",
+      "body": {
+        "dimensions": "147.6 x 71.6 x 7.8 mm (5.81 x 2.82 x 0.31 in)",
+        "weight": "170 g (6.00 oz)"
+      },
+      "display": {
+        "type": "Super Retina XDR OLED, HDR10, 1000 nits (typ), 2000 nits (peak)",
+        "size": "6.1 inches, 91.3 cm2 (~86.4% screen-to-body ratio)",
+        "resolution": "1179 x 2556 pixels, 19.5:9 ratio (~460 ppi density)"
+      },
+      "mainCamera": "Dual 48 MP, f/1.6 (wide, sensor-shift OIS) + 12 MP, f/2.2 (ultrawide, AF), 4K@60fps",
+      "selfieCamera": "12 MP, f/1.9 (wide, PDAF) + SL 3D (depth/biometrics sensor), 4K@60fps"
+    },
+    {
+      "id": 7,
+      "productName": "iPhone 17",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17.jpg",
+      "amount": 1199,
+      "description": "Latest iPhone 17 model",
+      "networkTechnology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+      "launchDate": "September 2025",
+      "body": {
+        "dimensions": "147.6 x 71.6 x 7.8 mm (5.81 x 2.82 x 0.31 in)",
+        "weight": "170 g (6.00 oz)"
+      },
+      "display": {
+        "type": "LTPO Super Retina XDR OLED, 120Hz ProMotion, 2000 nits (peak)",
+        "size": "6.27 inches, 95.8 cm2 (~87.5% screen-to-body ratio)",
+        "resolution": "1200 x 2600 pixels, 19.5:9 ratio (~460 ppi density)"
+      },
+      "mainCamera": "Dual 48 MP, f/1.6 (wide, sensor-shift OIS) + 48 MP, f/2.2 (ultrawide, AF), 4K@60fps",
+      "selfieCamera": "24 MP, f/1.9 (wide, PDAF) + SL 3D (depth/biometrics sensor), 4K@60fps"
+    }
+  ],
+  "tablets": [
+    {
+      "id": 11,
+      "productName": "iPad Air",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-2024.jpg",
+      "amount": 599,
+      "description": "iPad Air with M2 chip",
+      "networkTechnology": "GSM / HSPA / LTE / 5G",
+      "launchDate": "May 2024",
+      "body": {
+        "dimensions": "247.6 x 178.5 x 6.1 mm (9.75 x 7.03 x 0.24 in)",
+        "weight": "462 g (1.02 lb)"
+      },
+      "display": {
+        "type": "Liquid Retina IPS LCD, 500 nits (typ)",
+        "size": "11.0 inches, 359.0 cm2 (~81.2% screen-to-body ratio)",
+        "resolution": "1640 x 2360 pixels (~264 ppi density)"
+      },
+      "mainCamera": "12 MP, f/1.8 (wide), 4K@60fps",
+      "selfieCamera": "12 MP, f/2.4 (ultrawide, landscape), 1080p@60fps"
+    },
+    {
+      "id": 12,
+      "productName": "iPad Pro 11",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2024.jpg",
+      "amount": 899,
+      "description": "iPad Pro 11-inch with M4",
+      "networkTechnology": "GSM / HSPA / LTE / 5G",
+      "launchDate": "May 2024",
+      "body": {
+        "dimensions": "249.7 x 177.5 x 5.3 mm (9.83 x 6.99 x 0.21 in)",
+        "weight": "444 g (0.98 lb)"
+      },
+      "display": {
+        "type": "Ultra Retina Tandem OLED, 120Hz, HDR10, 1000 nits (typ), 1600 nits (peak)",
+        "size": "11.0 inches, 362.9 cm2 (~82.0% screen-to-body ratio)",
+        "resolution": "1668 x 2420 pixels (~264 ppi density)"
+      },
+      "mainCamera": "12 MP, f/1.8 (wide) + TOF 3D LiDAR scanner, 4K@60fps",
+      "selfieCamera": "12 MP, f/2.4 (ultrawide, landscape, Center Stage) + SL 3D, 1080p@60fps"
+    },
+    {
+      "id": 13,
+      "productName": "iPad Pro 13",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-13-2024.jpg",
+      "amount": 1099,
+      "description": "iPad Pro 13-inch with M4",
+      "networkTechnology": "GSM / HSPA / LTE / 5G",
+      "launchDate": "May 2024",
+      "body": {
+        "dimensions": "281.6 x 215.5 x 5.1 mm (11.09 x 8.48 x 0.20 in)",
+        "weight": "579 g (1.28 lb)"
+      },
+      "display": {
+        "type": "Ultra Retina Tandem OLED, 120Hz, HDR10, 1000 nits (typ), 1600 nits (peak)",
+        "size": "13.0 inches, 519.7 cm2 (~85.8% screen-to-body ratio)",
+        "resolution": "2064 x 2752 pixels (~264 ppi density)"
+      },
+      "mainCamera": "12 MP, f/1.8 (wide) + TOF 3D LiDAR scanner, 4K@60fps",
+      "selfieCamera": "12 MP, f/2.4 (ultrawide, landscape, Center Stage) + SL 3D, 1080p@60fps"
+    },
+    {
+      "id": 14,
+      "productName": "Galaxy Tab S9",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9.jpg",
+      "amount": 799,
+      "description": "Samsung Galaxy Tab S9",
+      "networkTechnology": "GSM / HSPA / LTE / 5G",
+      "launchDate": "August 2023",
+      "body": {
+        "dimensions": "254.3 x 165.8 x 5.9 mm (10.01 x 6.53 x 0.23 in)",
+        "weight": "498 g (1.10 lb)"
+      },
+      "display": {
+        "type": "Dynamic AMOLED 2X, 120Hz, HDR10+",
+        "size": "11.0 inches, 350.9 cm2 (~83.2% screen-to-body ratio)",
+        "resolution": "1600 x 2560 pixels, 16:10 ratio (~274 ppi density)"
+      },
+      "mainCamera": "13 MP, f/2.0 (wide), 4K@60fps",
+      "selfieCamera": "12 MP, f/2.4 (ultrawide), 4K@30fps"
+    },
+    {
+      "id": 15,
+      "productName": "Galaxy Tab S9 Ultra",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9-ultra.jpg",
+      "amount": 1199,
+      "description": "Samsung Galaxy Tab S9 Ultra",
+      "networkTechnology": "GSM / HSPA / LTE / 5G",
+      "launchDate": "August 2023",
+      "body": {
+        "dimensions": "326.4 x 208.6 x 5.5 mm (12.85 x 8.21 x 0.22 in)",
+        "weight": "732 g (1.61 lb)"
+      },
+      "display": {
+        "type": "Dynamic AMOLED 2X, 120Hz, HDR10+",
+        "size": "14.6 inches, 617.8 cm2 (~90.7% screen-to-body ratio)",
+        "resolution": "1848 x 2960 pixels, 16:10 ratio (~239 ppi density)"
+      },
+      "mainCamera": "Dual 13 MP (wide) + 8 MP (ultrawide), 4K@60fps",
+      "selfieCamera": "Dual 12 MP (wide) + 12 MP (ultrawide), 4K@60fps"
+    },
+    {
+      "id": 16,
+      "productName": "Surface Pro 10",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/microsoft-surface-pro-10.jpg",
+      "amount": 999,
+      "description": "Microsoft Surface Pro 10",
+      "networkTechnology": "Wi-Fi / 5G (Optional)",
+      "launchDate": "March 2024",
+      "body": {
+        "dimensions": "287 x 209 x 9.3 mm (11.3 x 8.2 x 0.37 in)",
+        "weight": "879 g (1.94 lb)"
+      },
+      "display": {
+        "type": "PixelSense Flow LCD, 120Hz, Dolby Vision IQ",
+        "size": "13.0 inches, 3:2 ratio",
+        "resolution": "2880 x 1920 pixels (~267 ppi density)"
+      },
+      "mainCamera": "10.5 MP Ultra HD, 4K video",
+      "selfieCamera": "1440p Quad HD with Studio Effects, Windows Hello face authentication"
+    },
+    {
+      "id": 17,
+      "productName": "Pixel Tablet",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-tablet.jpg",
+      "amount": 499,
+      "description": "Google Pixel Tablet",
+      "networkTechnology": "Wi-Fi only",
+      "launchDate": "June 2023",
+      "body": {
+        "dimensions": "258 x 169 x 8.1 mm (10.16 x 6.65 x 0.32 in)",
+        "weight": "493 g (1.09 lb)"
+      },
+      "display": {
+        "type": "IPS LCD, 500 nits (typ)",
+        "size": "10.95 inches, 347.0 cm2 (~79.7% screen-to-body ratio)",
+        "resolution": "1600 x 2560 pixels, 16:10 ratio (~276 ppi density)"
+      },
+      "mainCamera": "8 MP, f/2.0 (wide), 1080p@30fps",
+      "selfieCamera": "8 MP, f/2.0 (wide), 1080p@30fps"
+    }
+  ],
+  "watches": [
+    {
+      "id": 21,
+      "productName": "Apple Watch Series 9",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-9.jpg",
+      "amount": 399,
+      "description": "Apple Watch Series 9",
+      "networkTechnology": "GSM / HSPA / LTE",
+      "launchDate": "September 2023",
+      "body": {
+        "dimensions": "45 x 38 x 10.7 mm (1.77 x 1.50 x 0.42 in)",
+        "weight": "38.7 g (1.37 oz)"
+      },
+      "display": {
+        "type": "OLED Retina LTPO, 2000 nits (peak)",
+        "size": "1.9 inches, 1143 mm2 (~57.4% screen-to-body ratio)",
+        "resolution": "484 x 396 pixels (~326 ppi density)"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 22,
+      "productName": "Apple Watch Ultra 2",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-ultra-2.jpg",
+      "amount": 799,
+      "description": "Apple Watch Ultra 2",
+      "networkTechnology": "GSM / HSPA / LTE",
+      "launchDate": "September 2023",
+      "body": {
+        "dimensions": "49 x 44 x 14.4 mm (1.93 x 1.73 x 0.57 in)",
+        "weight": "61.4 g (2.17 oz)"
+      },
+      "display": {
+        "type": "OLED Retina LTPO, 3000 nits (peak)",
+        "size": "1.92 inches, 1185 mm2 (~50.2% screen-to-body ratio)",
+        "resolution": "502 x 410 pixels (~338 ppi density)"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 23,
+      "productName": "Galaxy Watch 6",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6.jpg",
+      "amount": 299,
+      "description": "Samsung Galaxy Watch 6",
+      "networkTechnology": "GSM / HSPA / LTE",
+      "launchDate": "August 2023",
+      "body": {
+        "dimensions": "42.8 x 44.4 x 9 mm (1.69 x 1.75 x 0.35 in)",
+        "weight": "33.3 g (1.17 oz)"
+      },
+      "display": {
+        "type": "Super AMOLED, Sapphire crystal",
+        "size": "1.5 inches, 1729 mm2",
+        "resolution": "480 x 480 pixels (~453 ppi density)"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 24,
+      "productName": "Galaxy Watch 6 Classic",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg",
+      "amount": 399,
+      "description": "Samsung Galaxy Watch 6 Classic",
+      "networkTechnology": "GSM / HSPA / LTE",
+      "launchDate": "August 2023",
+      "body": {
+        "dimensions": "46.5 x 46.5 x 10.9 mm (1.83 x 1.83 x 0.43 in)",
+        "weight": "59 g (2.08 oz)"
+      },
+      "display": {
+        "type": "Super AMOLED, Rotating bezel",
+        "size": "1.5 inches, 1729 mm2",
+        "resolution": "480 x 480 pixels (~453 ppi density)"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 25,
+      "productName": "Pixel Watch 2",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-watch-2.jpg",
+      "amount": 349,
+      "description": "Google Pixel Watch 2",
+      "networkTechnology": "GSM / HSPA / LTE",
+      "launchDate": "October 2023",
+      "body": {
+        "dimensions": "41 x 41 x 12.3 mm (1.61 x 1.61 x 0.48 in)",
+        "weight": "31 g (1.09 oz)"
+      },
+      "display": {
+        "type": "AMOLED, 1000 nits (peak), 3D Corning Gorilla Glass 5",
+        "size": "1.2 inches, 1140 mm2",
+        "resolution": "450 x 450 pixels (~320 ppi density)"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 26,
+      "productName": "Garmin Fenix 7",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/garmin-fenix-7.jpg",
+      "amount": 699,
+      "description": "Garmin Fenix 7",
+      "networkTechnology": "No cellular connectivity",
+      "launchDate": "January 2022",
+      "body": {
+        "dimensions": "47 x 47 x 14.5 mm (1.85 x 1.85 x 0.57 in)",
+        "weight": "79 g (2.79 oz)"
+      },
+      "display": {
+        "type": "Transflective memory-in-pixel (MIP)",
+        "size": "1.3 inches, 1340 mm2",
+        "resolution": "260 x 260 pixels (~283 ppi density)"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 27,
+      "productName": "Fitbit Sense 2",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/fitbit-sense-2.jpg",
+      "amount": 249,
+      "description": "Fitbit Sense 2",
+      "networkTechnology": "No cellular connectivity",
+      "launchDate": "September 2022",
+      "body": {
+        "dimensions": "40.5 x 40.5 x 12.3 mm (1.59 x 1.59 x 0.48 in)",
+        "weight": "37.6 g (1.33 oz)"
+      },
+      "display": {
+        "type": "AMOLED, Always-on display",
+        "size": "1.58 inches, 1130 mm2",
+        "resolution": "336 x 336 pixels (~301 ppi density)"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    }
+  ],
+  "routers": [
+    {
+      "id": 31,
+      "productName": "TP-Link Archer AX73",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/tp-link-archer-ax73.jpg",
+      "amount": 149,
+      "description": "Wi-Fi 6 Router",
+      "networkTechnology": "Wi-Fi 6 (802.11ax/ac/n/a 5 GHz, 802.11ax/n/b/g 2.4 GHz)",
+      "launchDate": "November 2020",
+      "body": {
+        "dimensions": "272.5 x 147.2 x 49.2 mm (10.7 x 5.8 x 1.9 in)",
+        "weight": "660 g (1.45 lb)"
+      },
+      "display": {
+        "type": "LED status indicators (Power, 2.4GHz, 5GHz, Internet, LAN, USB)",
+        "size": "N/A",
+        "resolution": "N/A"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 32,
+      "productName": "Netgear Nighthawk AX12",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/netgear-nighthawk-ax12.jpg",
+      "amount": 399,
+      "description": "12-Stream Wi-Fi 6 Router",
+      "networkTechnology": "Wi-Fi 6 (12-Stream AX6000 802.11ax)",
+      "launchDate": "May 2019",
+      "body": {
+        "dimensions": "310 x 202 x 168 mm (12.2 x 7.9 x 6.6 in)",
+        "weight": "1360 g (3.0 lb)"
+      },
+      "display": {
+        "type": "LED status indicators",
+        "size": "N/A",
+        "resolution": "N/A"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 33,
+      "productName": "ASUS RT-AX88U",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/asus-rt-ax88u.jpg",
+      "amount": 299,
+      "description": "Dual-band Wi-Fi 6 Gaming Router",
+      "networkTechnology": "Wi-Fi 6 (Dual-band AX6000 802.11ax)",
+      "launchDate": "October 2018",
+      "body": {
+        "dimensions": "300 x 188 x 60.5 mm (11.8 x 7.4 x 2.4 in)",
+        "weight": "1010 g (2.23 lb)"
+      },
+      "display": {
+        "type": "LED status indicators (Power, Wi-Fi, WAN, LAN, USB, WPS)",
+        "size": "N/A",
+        "resolution": "N/A"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 34,
+      "productName": "Google Nest WiFi Pro",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/google-nest-wifi-pro.jpg",
+      "amount": 199,
+      "description": "Wi-Fi 6E Mesh Router",
+      "networkTechnology": "Wi-Fi 6E (AXE5400 Tri-band 2.4 GHz, 5 GHz, 6 GHz)",
+      "launchDate": "October 2022",
+      "body": {
+        "dimensions": "130 x 117 x 85 mm (5.1 x 4.6 x 3.3 in)",
+        "weight": "450 g (0.99 lb)"
+      },
+      "display": {
+        "type": "Single multi-color status LED",
+        "size": "N/A",
+        "resolution": "N/A"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 35,
+      "productName": "Linksys Velop MX5300",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/linksys-velop-mx5300.jpg",
+      "amount": 349,
+      "description": "Tri-band Mesh Wi-Fi 6 System",
+      "networkTechnology": "Wi-Fi 6 (AX5300 Tri-band 802.11ax)",
+      "launchDate": "November 2019",
+      "body": {
+        "dimensions": "114.3 x 114.3 x 243.8 mm (4.5 x 4.5 x 9.6 in)",
+        "weight": "1588 g (3.5 lb)"
+      },
+      "display": {
+        "type": "Top status LED indicator",
+        "size": "N/A",
+        "resolution": "N/A"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 36,
+      "productName": "Eero Pro 6E",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/eero-pro-6e.jpg",
+      "amount": 299,
+      "description": "Wi-Fi 6E Mesh Router",
+      "networkTechnology": "Wi-Fi 6E (Tri-band AX5400 2.4 GHz, 5 GHz, 6 GHz)",
+      "launchDate": "May 2022",
+      "body": {
+        "dimensions": "139 x 139 x 55 mm (5.5 x 5.5 x 2.2 in)",
+        "weight": "540 g (1.19 lb)"
+      },
+      "display": {
+        "type": "Front status LED indicator",
+        "size": "N/A",
+        "resolution": "N/A"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    },
+    {
+      "id": 37,
+      "productName": "TP-Link Deco XE75",
+      "imageUrl": "https://fdn2.gsmarena.com/vv/bigpic/tp-link-deco-xe75.jpg",
+      "amount": 249,
+      "description": "Tri-band Wi-Fi 6E Mesh System",
+      "networkTechnology": "Wi-Fi 6E (AXE5400 Tri-band 802.11axe)",
+      "launchDate": "March 2022",
+      "body": {
+        "dimensions": "105 x 105 x 169 mm (4.1 x 4.1 x 6.6 in)",
+        "weight": "520 g (1.15 lb)"
+      },
+      "display": {
+        "type": "Bottom status LED indicator",
+        "size": "N/A",
+        "resolution": "N/A"
+      },
+      "mainCamera": "No",
+      "selfieCamera": "No"
+    }
+  ]
+}

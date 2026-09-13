@@ -116,6 +116,27 @@ class ProductControllerIntegrationTest {
     }
 
     @Test
+    @DisplayName("Integration: GET /api/getProduct/{id} with valid ID should return product")
+    void getProductById_integration_shouldReturnProduct() {
+        webTestClient.get()
+                .uri("/api/getProduct/1")
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .jsonPath("$.id").isEqualTo(1)
+                .jsonPath("$.productName").isEqualTo("iPhone 11");
+    }
+
+    @Test
+    @DisplayName("Integration: GET /api/getProduct/{id} with invalid ID should return 404")
+    void getProductById_integration_invalidId_shouldReturnNotFound() {
+        webTestClient.get()
+                .uri("/api/getProduct/999")
+                .exchange()
+                .expectStatus().isNotFound();
+    }
+
+    @Test
     @DisplayName("Integration: GET /api/unknown should return 404")
     void unknownEndpoint_shouldReturn404() {
         webTestClient.get()
